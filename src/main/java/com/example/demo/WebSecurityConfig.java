@@ -9,6 +9,9 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 public class WebSecurityConfig {
 
 	protected void configure(HttpSecurity http) throws Exception {
-		http.authorizeRequests().anyRequest().authenticated().and().formLogin().permitAll().and().httpBasic();
+		http.authorizeRequests()
+		.anyRequest().authenticated()
+		.and().formLogin().permitAll()
+		.and().httpBasic();
 	}
 }
